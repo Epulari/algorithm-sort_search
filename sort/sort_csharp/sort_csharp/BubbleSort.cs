@@ -7,13 +7,19 @@ using System.Diagnostics; //定义计时对象
 
 namespace sort_csharp
 {
+    /*
+     * 功能
+     * 冒泡排序
+     * Epulari T 
+     * 2018.7.31
+     */
     public class BubbleSort
     {
         /// <summary>
         /// 冒泡排序
         /// </summary>
         /// <param name="arr">arr</param>
-        public void BulleSort(int[] arr)
+        public void MyBulleSort(int[] arr)
         {
             Stopwatch oTime = new Stopwatch(); //定义一个计时对象
             oTime.Start(); //开始计时 

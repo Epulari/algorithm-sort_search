@@ -1,12 +1,17 @@
+/**
+ * Created by Epulari T on 2018/7/31.
+ */
+
+//冒泡排序
 function BubbleSort(arr) {
 	//外层循环：一轮比较。每次都从第一个元素开始，但是每次最后都减少一个元素，则相当于每次len-1
 	for(var i = 0, len = arr.length; i < len - 1; len--) {
 		//内层循环：相邻元素两两对比
 		for (var j = 0; j < len - 1; j++) {
-			if(arr[j] > arr[j+1]) {
+			if(arr[j] > arr[j + 1]) {
 				var temp = arr[j];
-				arr[j] = arr[j+1];
-				arr[j+1] = temp;
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
 			}
 		}
 		//输出本轮排序结果
