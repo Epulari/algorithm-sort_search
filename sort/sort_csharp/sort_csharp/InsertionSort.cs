@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics; //定义计时对象
 
 namespace sort_csharp
 {
@@ -21,9 +20,6 @@ namespace sort_csharp
         /// <param name="arr">arr</param>
         public void MyInsertionSort(int[] arr)
         {
-            Stopwatch oTime = new Stopwatch(); //定义一个计时对象
-            oTime.Start(); //开始计时 
-
             //外层循环：一轮比较。每次已排序列多一个元素，i代表已排序列元素的最大索引，最开始只有一个元素arr[0]
             for (int i = 0, len = arr.Length; i < len - 1; i++)
             {
@@ -50,9 +46,6 @@ namespace sort_csharp
                 //换行，每轮为一行
                 Console.WriteLine();
             }
-
-            oTime.Stop(); //结束计时
-            Console.WriteLine("程序的运行时间：{0} 秒", oTime.Elapsed.TotalSeconds);
         }
     }
 }
