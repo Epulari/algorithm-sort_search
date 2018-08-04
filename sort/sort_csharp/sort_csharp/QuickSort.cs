@@ -18,6 +18,8 @@ namespace sort_csharp
         /// 插入排序
         /// </summary>
         /// <param name="arr">arr</param>
+        /// <param name="low">arr</param>
+        /// <param name="high">arr</param>
         public void MyQuickSort(int[] arr, int low, int high)
         {
             if (low >= high)
@@ -25,7 +27,7 @@ namespace sort_csharp
                 return;
             }
             int first = low, last = high;
-            //此时arr[low]被保存到key，所以元素arr[low]可以当作是一个空位，用于保存数据，之后每赋值一次，也会有一个位置空出来，直到last==first，此时a[last]==a[first]=key
+            //此时arr[low]被保存到key，所以元素arr[low]可以当作是一个空位，用于保存数据，之后每赋值一次，也会有一个位置空出来，直到last==first，此时arr[last]==arr[first]=key
             int key = arr[low];
             while (first < last)
             {
