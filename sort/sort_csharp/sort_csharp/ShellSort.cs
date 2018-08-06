@@ -17,9 +17,7 @@ namespace sort_csharp
         /// <summary>
         /// 希尔排序
         /// </summary>
-        /// <param name="arr">arr</param>
-        /// <param name="low">low</param>
-        /// <param name="high">high</param>
+        /// <param name="arr">数组</param>
         public void MyShellSort(int[] arr)
         {
             int len = len = arr.Length;

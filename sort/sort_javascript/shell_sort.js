@@ -7,6 +7,8 @@
  *插入排序：步长为1的希尔排序
  *对插入排序进行修改：将插入排序的1变为gap，gap赋值1
  *每轮内部比较时，将待排元素与已排序数比较，如果待排元素小于已排序数，则将已排序数向后移位，直到待排元素大于或等于某已排元素，则将待排元素放入到该元素后的空位
+ *
+ * @para = arr 数组
  */
 function Shell_Insertion_Sort(arr) {
 	var len = len = arr.length;
@@ -57,6 +59,8 @@ Shell_Insertion_Sort(arr);
 /*
  *希尔排序
  *根据上面的方法依次对gap进行赋值
+ *
+ * @para = arr 数组
  */
 function ShellSort(arr) {
 	var len = len = arr.length;
