@@ -17,7 +17,7 @@ namespace sort_csharp
         /// <summary>
         /// 插入排序
         /// </summary>
-        /// <param name="arr">arr</param>
+        /// <param name="arr">数组</param>
         public void MyInsertionSort(int[] arr)
         {
             int len = arr.Length;

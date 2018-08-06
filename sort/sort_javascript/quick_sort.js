@@ -2,7 +2,13 @@
  * Created by Epulari T on 2018/8/2.
  */
 
-//快速排序
+
+/*
+ *快速排序
+ *在每轮排序里定义左数组和右数组，并分别对其进行排序，然后连接两个数据和关键值
+ *
+ * @para = arr 数组
+ */
 function QuickSort(arr) {
 	var len = arr.length;
 	//判断数组长度，如果当前传入的数组只有一个元素就结束递归

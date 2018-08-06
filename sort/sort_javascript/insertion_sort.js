@@ -6,6 +6,8 @@
 /*
  *插入排序1
  *每轮内部比较时，将待排元素与前一个比较，如果待排元素小，则交换两元素值，依次交换到满足条件为止
+ *
+ * @para = arr 数组
  */
 function InsertionSort(arr) {
 	var len = len = arr.length;
@@ -55,6 +57,8 @@ InsertionSort(arr);
 /*
  *插入排序1
  *每轮内部比较时，将待排元素与已排序数比较，如果待排元素小于已排序数，则将已排序数向后移位，直到待排元素大于或等于某已排元素，则将待排元素放入到该元素后的空位
+ *
+ * @para = arr 数组
  */
 function InsertionSort2(arr) {
 	var len = len = arr.length;
