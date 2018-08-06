@@ -4,8 +4,12 @@
 
 //冒泡排序
 function BubbleSort(arr) {
+	var len = arr.length;
+	if (len < 2) {
+		return;
+	}
 	//外层循环：一轮比较。每次都从第一个元素开始，但是每次最后都减少一个元素，则相当于每次len-1
-	for(var i = 0, len = arr.length; i < len - 1; len--) {
+	for(var i = 0; i < len - 1; len--) {
 		//内层循环：相邻元素两两对比
 		for (var j = 0; j < len - 1; j++) {
 			if(arr[j] > arr[j + 1]) {

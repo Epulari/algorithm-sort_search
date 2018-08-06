@@ -20,8 +20,13 @@ namespace sort_csharp
         /// <param name="arr">arr</param>
         public void MyBulleSort(int[] arr)
         {
+            int len = arr.Length;
+            if (len < 2)
+            {
+                return;
+            }
             //外层循环：一轮比较。每次都从第一个元素开始，但是每次最后都减少一个元素，则相当于每次len-1
-            for (int i = 0, len = arr.Length; i < len - 1; len--)
+            for (int i = 0; i < len - 1; len--)
             {
                 //内层循环：相邻元素两两对比
                 for (int j = 0; j < len - 1; j++)
