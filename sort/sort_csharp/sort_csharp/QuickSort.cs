@@ -15,13 +15,18 @@ namespace sort_csharp
     class QuickSort
     {
         /// <summary>
-        /// 插入排序
+        /// 快速排序
         /// </summary>
         /// <param name="arr">arr</param>
-        /// <param name="low">arr</param>
-        /// <param name="high">arr</param>
+        /// <param name="low">low</param>
+        /// <param name="high">high</param>
         public void MyQuickSort(int[] arr, int low, int high)
         {
+            int len = arr.Length;
+            if (len < 2)
+            {
+                return;
+            }
             if (low >= high)
             {
                 return;

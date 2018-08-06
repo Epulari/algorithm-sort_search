@@ -6,7 +6,7 @@
 function QuickSort(arr) {
 	var len = arr.length;
 	//判断数组长度，如果当前传入的数组只有一个元素就结束递归
-	if (len <= 1) {
+	if (len < 2) {
 		return arr;
 	}
 	//定义基准元素的左侧数组和右侧数组
