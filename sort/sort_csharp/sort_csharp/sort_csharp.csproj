@@ -47,6 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InsertionSort.cs" />
     <Compile Include="QuickSort.cs" />
+    <Compile Include="ShellSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
