@@ -48,11 +48,11 @@ namespace sort_csharp
                 7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
-            int[] arr_iss = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
+            int[] arr_ins = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
             //插入排序
-            InsertionSort iss = new InsertionSort();
+            InsertionSort ins = new InsertionSort();
             Console.WriteLine("插入排序：");
-            iss.MyInsertionSort(arr_iss);
+            ins.MyInsertionSort(arr_ins);
             /*result
                 7 26 53 22 32 28 38 23 24 54 27 78 33
                 7 26 53 22 32 28 38 23 24 54 27 78 33
@@ -68,11 +68,11 @@ namespace sort_csharp
                 7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
-            int[] arr_ss = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
+            int[] arr_shs = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
             //希尔排序
-            ShellSort ss = new ShellSort();
+            ShellSort shs = new ShellSort();
             Console.WriteLine("希尔排序：");
-            ss.MyShellSort(arr_ss);
+            shs.MyShellSort(arr_shs);
             /*result
                 gap=13
                 本轮结果：
@@ -103,6 +103,26 @@ namespace sort_csharp
                 7 22 23 24 26 27 28 32 38 53 54 78 33
                 7 22 23 24 26 27 28 32 33 38 53 54 78
                 本轮结果：
+                7 22 23 24 26 27 28 32 33 38 53 54 78
+             */
+
+            int[] arr_ses = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
+            //选择排序
+            SelectionSort ses = new SelectionSort();
+            Console.WriteLine("选择排序：");
+            ses.MySelectionSort(arr_ses);
+            /*result
+                7 26 53 22 32 28 38 23 24 54 27 78 33
+                7 22 53 26 32 28 38 23 24 54 27 78 33
+                7 22 23 53 32 28 38 26 24 54 27 78 33
+                7 22 23 24 53 32 38 28 26 54 27 78 33
+                7 22 23 24 26 53 38 32 28 54 27 78 33
+                7 22 23 24 26 27 53 38 32 54 28 78 33
+                7 22 23 24 26 27 28 53 38 54 32 78 33
+                7 22 23 24 26 27 28 32 53 54 38 78 33
+                7 22 23 24 26 27 28 32 33 54 53 78 38
+                7 22 23 24 26 27 28 32 33 38 54 78 53
+                7 22 23 24 26 27 28 32 33 38 53 78 54
                 7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
