@@ -26,10 +26,10 @@ namespace sort_csharp
                 return;
             }
             //外层循环：一轮比较。从前到后依次假设元素为最小值，依次与后面的元素值进行比较并交换，则数组从前到后依次变得有序
-            for (var i = 0; i < len - 1; i++)
+            for (int i = 0; i < len - 1; i++)
             {
                 //内层循环：依次与待比较元素的值比较并交换
-                for (var j = i + 1; j < len; j++)
+                for (int j = i + 1; j < len; j++)
                 {
                     int temp = arr[i];
                     if (arr[i] > arr[j])
