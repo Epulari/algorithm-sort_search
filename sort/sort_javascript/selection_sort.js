@@ -20,7 +20,7 @@ function SelectionSort(arr) {
 		//永远假设首元素值最小，min永远代表最小值，index为其下标
 		var min = arr[0];
 		var index = 0;
-		//将每个元素与最小值进行比较，min永远代表最小值
+		//内层循环：将每个元素与最小值进行比较，min永远代表最小值
 		for(var j = 1; j < len; j++) {
 			if (min > arr[j]) {
 				min = arr[j];
