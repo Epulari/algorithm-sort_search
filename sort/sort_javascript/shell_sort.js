@@ -73,6 +73,7 @@ function ShellSort(arr) {
 	while(gap < len) {
 		gap = 3 * gap + 1;
 	}
+	gap = (gap - 1) / 3;
 	//步长为1时执行一次插入排序，然后结束排序
 	while(gap > 0) {
 		//外层循环：一轮比较。每次已排序列多一个元素，i代表已排序列元素的最大索引，最开始只有一个元素arr[0]

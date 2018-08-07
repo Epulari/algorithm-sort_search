@@ -31,6 +31,7 @@ namespace sort_csharp
             {
                 gap = 3 * gap + 1;
             }
+            gap = (gap - 1) / 3;
             //步长为1时执行一次插入排序，然后结束排序
             while (gap > 0)
             {
