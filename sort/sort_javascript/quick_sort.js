@@ -31,7 +31,7 @@ function QuickSort(arr) {
 	}
 	//输出每一次排列的结果
 	console.log(left.concat(key, right));
-	return  QuickSort(left).concat(key).concat(QuickSort(right))//递归
+	return  QuickSort(left).concat(key).concat(QuickSort(right)) //递归
 }
 
 var arr = [7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33];
