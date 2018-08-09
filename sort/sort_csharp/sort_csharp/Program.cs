@@ -146,8 +146,27 @@ namespace sort_csharp
                 7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
-            Console.ReadKey();
-            
+            int[] arr_ms = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
+            //堆排序
+            MergeSort ms = new MergeSort();
+            Console.WriteLine("归并排序：");
+            ms.MyMergeSort(arr_ms);
+            /*result
+                26 53
+                7 26 53
+                28 32
+                22 28 32
+                7 22 26 28 32 53
+                23 24
+                23 24 38
+                27 54
+                33 78
+                27 33 54 78
+                23 24 27 33 38 54 78
+                7 22 23 24 26 27 28 32 33 38 53 54 78
+             */
+
+            Console.ReadKey();            
         }
     }
 }
