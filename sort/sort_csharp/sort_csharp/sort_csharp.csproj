@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BubbleSort.cs" />
+    <Compile Include="CountingSort.cs" />
     <Compile Include="HeapSort.cs" />
     <Compile Include="MergeSort.cs" />
     <Compile Include="Program.cs" />

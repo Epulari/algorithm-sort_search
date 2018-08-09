@@ -11,7 +11,6 @@ namespace sort_csharp
         static void Main(string[] args)
         {
             int[] arr_bs = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //冒泡排序
             BubbleSort bs = new BubbleSort();
             Console.WriteLine("冒泡排序：");
             bs.MyBulleSort(arr_bs);
@@ -32,7 +31,6 @@ namespace sort_csharp
              */
 
             int[] arr_qs = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //快速排序
             QuickSort qs = new QuickSort();
             Console.WriteLine("快速排序：");
             qs.MyQuickSort(arr_qs, 0, arr_qs.Length - 1);
@@ -49,7 +47,6 @@ namespace sort_csharp
              */
 
             int[] arr_ins = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //插入排序
             InsertionSort ins = new InsertionSort();
             Console.WriteLine("插入排序：");
             ins.MyInsertionSort(arr_ins);
@@ -69,7 +66,6 @@ namespace sort_csharp
              */
 
             int[] arr_shs = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //希尔排序
             ShellSort shs = new ShellSort();
             Console.WriteLine("希尔排序：");
             shs.MyShellSort(arr_shs);
@@ -107,7 +103,6 @@ namespace sort_csharp
              */
 
             int[] arr_ses = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //选择排序
             SelectionSort ses = new SelectionSort();
             Console.WriteLine("选择排序：");
             ses.MySelectionSort(arr_ses);
@@ -127,7 +122,6 @@ namespace sort_csharp
              */
 
             int[] arr_hs = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //堆排序
             HeapSort hs = new HeapSort();
             Console.WriteLine("堆排序：");
             hs.MyHeapSort(arr_hs);
@@ -147,7 +141,6 @@ namespace sort_csharp
              */
 
             int[] arr_ms = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
-            //堆排序
             MergeSort ms = new MergeSort();
             Console.WriteLine("归并排序：");
             ms.MyMergeSort(arr_ms);
@@ -163,6 +156,17 @@ namespace sort_csharp
                 33 78
                 27 33 54 78
                 23 24 27 33 38 54 78
+                7 22 23 24 26 27 28 32 33 38 53 54 78
+             */
+
+            int[] arr_cs = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
+            CountingSort cs = new CountingSort();
+            Console.WriteLine("计数排序：");
+            cs.MyCountingSort(arr_cs);
+            /*result
+                数组最小值：7
+                数组最大值：78
+                每个元素个数统计：0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
                 7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
