@@ -13,24 +13,7 @@ namespace sort_csharp
      * 2018.8.9
      */
     class CountingSort
-    {
-        int[] NewArray(int[] temp, int[] newarr, int min, int a, int b)
-        {
-            for (var i = min; i < a; i++)
-            {
-                for (var j = min; j < b; j++)
-                {
-                    //每在新数组中添加一个索引，原数组中索引对应的值就减1
-                    while (temp[i] != 0)
-                    {
-                        newarr[j] = i;
-                        temp[i] -= 1;
-                    }
-                }
-            }
-            return newarr;
-        }
-        
+    {        
         /// <summary>
         /// 计数排序
         /// </summary>
