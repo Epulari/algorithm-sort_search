@@ -46,10 +46,6 @@ namespace sort_csharp
             //根据最大值max初始化额外数组，数组最大索引值为max，则数组长度为max+1
             int templen = max + 1;
             int[] temp = new int[templen];
-            for (int i = 0; i < templen; i++)
-            {
-                temp[i] = 0;
-            }
 
             //统计数组每个数的个数
             for (var i = 0; i < len; i++)
