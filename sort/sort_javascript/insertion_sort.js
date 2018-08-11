@@ -10,7 +10,7 @@
  * @para = arr 数组
  */
 function InsertionSort(arr) {
-	var len = len = arr.length;
+	var len = arr.length;
 	if(len < 2) {
 		return arr;
 	}
@@ -62,7 +62,7 @@ InsertionSort(arr);
  * @para = arr 数组
  */
 function InsertionSort2(arr) {
-	var len = len = arr.length;
+	var len = arr.length;
 	if(len < 2) {
 		return arr;
 	}

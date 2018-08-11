@@ -11,7 +11,7 @@
  * @para = arr 数组
  */
 function Shell_Insertion_Sort(arr) {
-	var len = len = arr.length;
+	var len = arr.length;
 	if(len < 2) {
 		return arr;
 	}
@@ -64,7 +64,7 @@ Shell_Insertion_Sort(arr);
  * @para = arr 数组
  */
 function ShellSort(arr) {
-	var len = len = arr.length;
+	var len = arr.length;
 	if(len < 2) {
 		return arr;
 	}
