@@ -1,17 +1,17 @@
 # 排序和搜索算法
-## 排序算法
+## <a id="sort">排序算法</a>
 排序算法 | 平均时间复杂度 | 最好情况 | 最坏情况 | 空间复杂度（辅助空间） | 排序方式 | 基本思想 | 稳定性
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
 [冒泡排序](#bubble_sort) | O(n<sup>2</sup>) | O(n) | O(n<sup>2</sup>) | O(1) | In-place | 交换排序 | 稳定
-[快速排序](#bubble_sort) | O(nlogn) | O(nlogn) | O(n<sup>2</sup>) | O(nlogn) | In-place | 交换排序 | 不稳定
-[插入排序](#bubble_sort) | O(n<sup>2</sup>) | O(n) | O(n<sup>2</sup>) | O(1) | In-place | 插入排序 | 稳定
-[希尔排序](#bubble_sort) | O(nlogn) | O(nlog<sup>2</sup>n) | O(nlog<sup>2</sup>n) | O(1) | In-place | 插入排序 | 不稳定
-[选择排序](#bubble_sort) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1) | In-place | 选择排序 | 不稳定
-[堆排序](#bubble_sort) | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | In-place | 选择排序 | 不稳定
-[归并排序](#bubble_sort) | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | Out-place | 分治法 | 稳定
-[计数排序](#bubble_sort) | O(n+k) | O(n+k) | O(n+k) | O(k) | Out-place | 非比较排序 | 稳定
-[桶排序](#bubble_sort) | O(n+k) | O(n+k) | O(n<sup>2</sup>) | O(n+k) | Out-place | 非比较排序 | 稳定
-[基数排序](#bubble_sort) | O(n*k) | O(n*k) | O(n*k) | O(n+k) | Out-place | 非比较排序 | 稳定
+[快速排序](#quick_sort) | O(nlogn) | O(nlogn) | O(n<sup>2</sup>) | O(nlogn) | In-place | 交换排序 | 不稳定
+[插入排序](#insertion_sort) | O(n<sup>2</sup>) | O(n) | O(n<sup>2</sup>) | O(1) | In-place | 插入排序 | 稳定
+[希尔排序](#shell_sort) | O(nlogn) | O(nlog<sup>2</sup>n) | O(nlog<sup>2</sup>n) | O(1) | In-place | 插入排序 | 不稳定
+[选择排序](#selection_sort) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1) | In-place | 选择排序 | 不稳定
+[堆排序](#heap_sort) | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | In-place | 选择排序 | 不稳定
+[归并排序](#merge_sort) | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | Out-place | 分治法 | 稳定
+[计数排序](#counting_sort) | O(n+k) | O(n+k) | O(n+k) | O(k) | Out-place | 非比较排序 | 稳定
+[桶排序](#bucket_sort) | O(n+k) | O(n+k) | O(n<sup>2</sup>) | O(n+k) | Out-place | 非比较排序 | 稳定
+[基数排序](#radix_sort) | O(n*k) | O(n*k) | O(n*k) | O(n+k) | Out-place | 非比较排序 | 稳定
 
 **平均时间复杂度从低到高：**  
 　　（1）计数排序O(n+k)、桶排序O(n+k)  
@@ -46,6 +46,7 @@
 　　平均情况：T(n) = O(n<sup>2</sup>)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(1)。  
+[排序算法](#sort)
 
 ### <a id="quick_sort">快速排序 Quick Sort</a>
 **基本思想：**  
@@ -62,6 +63,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(nlogn)。  
+[排序算法](#sort)
 
 ### <a id="insertion_sort">插入排序 Insertion Sort</a>
 **基本思想：**  
@@ -78,6 +80,7 @@
 　　平均情况：T(n) = O(n<sup>2</sup>)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(1)。  
+[排序算法](#sort)
 
 ### <a id="shell_sort">希尔排序 Shell Sort</a>
 **基本思想：**  
@@ -94,6 +97,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
+[排序算法](#sort)
 
 ### <a id="selection_sort">选择排序 Selection Sort</a>
 **基本思想：**  
@@ -109,6 +113,7 @@
 　　平均情况：T(n) = O(n<sup>2</sup>)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
+[排序算法](#sort)
 
 ### <a id="heap_sort">堆排序 Heap Sort</a>
 **基本思想：**  
@@ -127,6 +132,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
+[排序算法](#sort)
 
 ### <a id="merge_sort">归并排序 Merge Sort</a>
 **基本思想：**  
@@ -142,6 +148,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(n)。  
+[排序算法](#sort)
 
 ### <a id="counting_sort">计数排序 Counting Sort</a>
 **基本思想：**  
@@ -166,6 +173,7 @@
 　　平均情况：T(n) = O(n+k)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(k)。  
+[排序算法](#sort)
 
 ### <a id="bucket_sort">桶排序 Bucket Sort</a>
 **基本思想：**  
@@ -184,6 +192,7 @@
 　　平均情况：T(n) = O(n+k)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(n+k)。  
+[排序算法](#sort)
 
 ### <a id="radix_sort">基数排序 Radix Sort</a>
 **基本思想：**  
@@ -211,6 +220,7 @@
 　　平均情况：T(n) = O(n*k)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(n+k)。  
+[排序算法](#sort)
 
 ### 计数排序、桶排序、基数排序
 　　我查阅了很多资料和例子，很多人都把这三者搞的混乱不清，有些人认为计数排序是桶排序，有些人认为桶排序是基数排序。  
@@ -221,5 +231,6 @@
 　　因此，计数排序中的桶排序起到的作用是使元素值按顺序排列，因为桶序号代表元素值，而由于桶序号的唯一性和规则性，每个元素值只出现一次，且这个排列的顺序中不仅包含所有元素值，还有其他无关的值，而桶内元素代表无序序列相同值出现的次数。而对于桶排序，桶序号是与元素值有关的映射关系（其实计数排序也是与元素值有关的映射关系，如桶序号等于元素值，则映射关系为f(x)=x），桶内元素就是无序序列的元素值。  
 　　**基数排序**的思想是按位数排列，不论是最高位优先法MSD，还是最低位优先法LSD，它的中心都是依次对数据的同一位进行规则建立，分配如桶，然后依次取出，当最后一位按规则入桶然后依次取出后，必然为有序数列。  
 　　因此从上面分析来看，计数排序只是在实现其中心思想上使用了桶排序的方法，借用桶排序这种手段来实现计数排序的计数；桶排序是按一定规则对数据进行分类然后合并，可以说是一种分治法；而基数排序是建立在桶排序之上的，它的核心是对每一位（基数）进行桶排序。  
+[排序算法](#sort)
 
 ## 搜索算法
