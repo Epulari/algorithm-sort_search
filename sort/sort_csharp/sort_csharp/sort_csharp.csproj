@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InsertionSort.cs" />
     <Compile Include="QuickSort.cs" />
+    <Compile Include="RadixSort.cs" />
     <Compile Include="SelectionSort.cs" />
     <Compile Include="ShellSort.cs" />
   </ItemGroup>
