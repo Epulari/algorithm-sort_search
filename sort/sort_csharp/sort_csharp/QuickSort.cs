@@ -21,12 +21,12 @@ namespace sort_csharp
         /// <param name="arr">数组</param>
         /// <param name="low">数组的起始位置</param>
         /// <param name="high">数组的终止位置</param>
-        public void MyQuickSort(int[] arr, int low, int high)
+        public int[] MyQuickSort(int[] arr, int low, int high)
         {
             int len = arr.Length;
             if (len < 2 || low >= high)
             {
-                return;
+                return arr;
             }
             //记录目标数组的起始位置（后续动态的左侧下标）/结束位置（后续动态的右侧下标）
             int first = low, last = high;
@@ -63,6 +63,7 @@ namespace sort_csharp
             MyQuickSort(arr, low, first - 1);
             //递归排序右边的元素
             MyQuickSort(arr, first + 1, high);
+            return arr;
         }
     }
 }
