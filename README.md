@@ -31,7 +31,7 @@
 　　外部排序，因排序数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。  
 　　归并排序、基数排序、计数排序、桶排序。  
 
-### <span id="bubble_sort">冒泡排序 Bubble Sort</span>
+### <a id="bubble_sort">冒泡排序 Bubble Sort</a>
 **基本思想：**  
 　　In-place、交换排序。  
 　　比较相邻的两个数，如果前者比后者大，则进行交换，每一轮排序后最后一个元素必然是最大的数。（如果数是按列排列，则较大的数下沉，较小的数冒起来。）  
@@ -47,7 +47,7 @@
 　　稳定性：稳定；  
 　　空间复杂度：O(1)。  
 
-### <span id="quick_sort">快速排序 Quick Sort</span>
+### <a id="quick_sort">快速排序 Quick Sort</a>
 **基本思想：**  
 　　In-place、交换排序。  
 　　在待排序数据中选出一个元素（通常为第一个元素、最后一个元素或中间元素）作为基准，将其他元素与基准元素进行比较进而分成两部分，一部分比基准大，一部分比基准小；然后对这两部分分别按相同方法继续排列，直到每个部分只有1个数。  
@@ -63,7 +63,7 @@
 　　稳定性：不稳定；  
 　　空间复杂度：O(nlogn)。  
 
-### <span id="insertion_sort">插入排序 Insertion Sort</span>
+### <a id="insertion_sort">插入排序 Insertion Sort</a>
 **基本思想：**  
 　　In-place、插入排序。  
 　　扑克牌整理牌的顺序方式。一组乱序数据，设定前一半是已排好序的数，将剩余的数依次在已排好序的数中从后向前扫描找到对应位置并插入，如果待插入的元素与有序序列中的某个元素相等，则插入到相等元素后面。这个算法需要反复把已排好顺序的元素逐步向后挪动，为新元素提供插入空间。  
@@ -79,7 +79,7 @@
 　　稳定性：稳定；  
 　　空间复杂度：O(1)。  
 
-### <span id="shell_sort">希尔排序 Shell Sort</span>
+### <a id="shell_sort">希尔排序 Shell Sort</a>
 **基本思想：**  
 　　In-place、插入排序。  
 　　第一个突破O(n<sup>2</sup>)的排序算法；是简单插入排序的改进版，与插入排序的不同处在于，它是优先比较距离较远的元素。希尔排序又被称作缩小增量排序/递减增量排序算法。  
@@ -95,7 +95,7 @@
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
 
-### <span id="selection_sort">选择排序 Selection Sort</span>
+### <a id="selection_sort">选择排序 Selection Sort</a>
 **基本思想：**  
 　　In-place、选择排序。  
 　　依次选出数组最小的数进行重新排列构建为有序数组。  
@@ -110,7 +110,7 @@
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
 
-### <span id="heap_sort">堆排序 Heap Sort</span>
+### <a id="heap_sort">堆排序 Heap Sort</a>
 **基本思想：**  
 　　In-place、选择排序。  
 　　利用堆这种数据结构所设计的一种排序算法。  
@@ -128,7 +128,7 @@
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
 
-### <span id="merge_sort">归并排序 Merge Sort</span>
+### <a id="merge_sort">归并排序 Merge Sort</a>
 **基本思想：**  
 　　Out-place。  
 　　该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。  
@@ -143,7 +143,7 @@
 　　稳定性：稳定；  
 　　空间复杂度：O(n)。  
 
-### <span id="counting_sort">计数排序 Counting Sort</span>
+### <a id="counting_sort">计数排序 Counting Sort</a>
 **基本思想：**  
 　　Out-place、计数排序、非比较的排序算法。  
 　　计数排序对一定量的整数排序时候的速度非常快，一般快于其他排序算法。但计数排序局限性比较大，只限于对整数进行排序。  
@@ -167,7 +167,7 @@
 　　稳定性：稳定；  
 　　空间复杂度：O(k)。  
 
-### <span id="bucket_sort">桶排序 Bucket Sort</span>
+### <a id="bucket_sort">桶排序 Bucket Sort</a>
 **基本思想：**  
 　　Out-place、计数排序、非比较的排序算法。  
 　　桶排序是计数排序的升级版。它利用了函数的映射关系（比较规则），高效与否的关键就在于这个映射函数的确定。  
@@ -185,7 +185,7 @@
 　　稳定性：稳定；  
 　　空间复杂度：O(n+k)。  
 
-### <span id="radix_sort">基数排序 Radix Sort</span>
+### <a id="radix_sort">基数排序 Radix Sort</a>
 **基本思想：**  
 　　Out-place、桶排序、非比较的排序算法、分配式排序。  
 　　基数即指位数，基数排序即位数排序。  
