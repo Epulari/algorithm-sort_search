@@ -57,6 +57,7 @@ namespace sort_csharp
                     {
                         arr[j + gap] = current;
                     }
+                    //输出本轮排序结果，字符以空格间隔
                     foreach (int k in arr)
                     {
                         Console.Write(k + " ");
@@ -64,12 +65,13 @@ namespace sort_csharp
                     //换行，每轮为一行
                     Console.WriteLine();
                 }
-
+                //输出本步长排序结果，字符以空格间隔
                 Console.WriteLine("本轮结果：");
                 foreach (int k in arr)
                 {
                     Console.Write(k + " ");
                 }
+                //换行，每轮为一行
                 Console.WriteLine();
 
                 gap = (gap - 1) / 3;

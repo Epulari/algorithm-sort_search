@@ -56,7 +56,7 @@ namespace sort_csharp
             else
             { }
 
-            //输出当前有序序列
+            //输出当前有序序列，字符以空格间隔
             foreach (int m in arr)
             {
                 Console.Write(m + " ");

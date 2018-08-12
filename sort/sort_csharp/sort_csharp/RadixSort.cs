@@ -57,7 +57,7 @@ namespace sort_csharp
                     temp[n][j] = arr[i];
                 }
             }
-            //依次打印出桶内元素
+            //依次打印出桶内元素，字符以空格间隔
             Console.Write("桶内：");
             foreach (int[] m in temp)
             {
@@ -67,9 +67,10 @@ namespace sort_csharp
                     {
                         Console.Write(k + " ");
                     }
+                    //换行，每个桶为一行
+                    Console.WriteLine();
                 }
             }
-            Console.WriteLine();
 
             //将桶内元素依次放回到数组中
             for (int i = 0, k = 0; i < 10; i++)
