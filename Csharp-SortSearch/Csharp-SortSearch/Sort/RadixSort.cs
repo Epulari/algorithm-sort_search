@@ -9,7 +9,9 @@ namespace Csharp_SortSearch.Sort
     /*
      * 功能
      * 基数排序
-     * 对数字进行排序，不考虑负数，不考虑小数点
+     * 按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位
+     * 有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优先级排序
+     * 最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前
      * Epulari T 
      * 2018.8.10
      */
@@ -97,7 +99,7 @@ namespace Csharp_SortSearch.Sort
         }
 
         /// <summary>
-        /// 基数排序
+        /// 基数排序-对数字进行排序，不考虑负数，不考虑小数点
         /// </summary>
         /// <param name="arr">数组</param>
         public void MyRadixSort(int[] arr)

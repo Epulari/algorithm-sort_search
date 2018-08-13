@@ -9,6 +9,7 @@ namespace Csharp_SortSearch.Sort
     /*
      * 功能
      * 冒泡排序
+     * 比较相邻的两个数，如果前者比后者大，则进行交换，每一轮排序后最后一个元素必然是最大的数
      * Epulari T 
      * 2018.7.31
      */

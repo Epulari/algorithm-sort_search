@@ -9,6 +9,7 @@ namespace Csharp_SortSearch.Sort
     /*
      * 功能
      * 堆排序
+     * 数组从左至右与堆从上到下从左至右一一对应
      * Epulari T 
      * 2018.8.7
      */

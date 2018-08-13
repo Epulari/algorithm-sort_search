@@ -9,6 +9,7 @@ namespace Csharp_SortSearch.Sort
     /*
      * 功能
      * 选择排序
+     * 依次选出数组最小的数并放到新数组中，新数组为有序数组
      * Epulari T 
      * 2018.8.7
      */

@@ -9,13 +9,14 @@ namespace Csharp_SortSearch.Sort
     /*
      * 功能
      * 计数排序
+     * 对于一个输入数组中的一个元素i，只要我们知道了这个数组中比i小的元素的个数x，那么我们就可以直接把i放到第（x+1）个位置，即i的索引为x（索引从0开始）
      * Epulari T 
      * 2018.8.11
      */
     class CountingSort
     {
         /// <summary>
-        /// 计数排序-计算数组中比元素i小的元素的个数x，那么我们就可以直接把i放到第（x+1）个位置，即i的索引为x（索引从0开始）
+        /// 计数排序-使用一个额外的数组，以f(x)=x-min代替x，即其中第i-min个元素是待排序数组中值等于i的元素的个数，知道了数组中比x小的元素的个数，就可以直接把x放到第（x+1）个位置上，即元素索引为x
         /// </summary>
         /// <param name="arr">数组</param>
         public int[] MyCountingSort(int[] arr)
