@@ -226,6 +226,21 @@ namespace Csharp_SortSearch
                 桶外：7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            int[] arr_ss = { 7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33 };
+            SequenceSearch ss = new SequenceSearch();
+            Console.WriteLine("顺序查找：");
+            int index = ss.MySequenceSearch(arr_ss, 28);
+            Console.WriteLine(index);
+            /*result
+                5
+             */
+
+
+
+
             Console.ReadKey();
 
         }
