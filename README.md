@@ -10,13 +10,13 @@
 [冒泡排序](#bubble_sort) | O(n<sup>2</sup>) | O(n) | O(n<sup>2</sup>) | O(1) | In-place | 交换排序 | 稳定
 [快速排序](#quick_sort) | O(nlogn) | O(nlogn) | O(n<sup>2</sup>) | O(nlogn) | In-place | 交换排序 | 不稳定
 [插入排序](#insertion_sort) | O(n<sup>2</sup>) | O(n) | O(n<sup>2</sup>) | O(1) | In-place | 插入排序 | 稳定
-[希尔排序](#shell_sort) | O(nlogn) | O(nlog<sup>2</sup>n) | O(nlog<sup>2</sup>n) | O(1) | In-place | 插入排序 | 不稳定
+[希尔排序](#shell_sort) | O(n<sup>1.3</sup>) | O(n) | O(n<sup>2</sup>) | O(1) | In-place | 插入排序 | 不稳定
 [选择排序](#selection_sort) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(n<sup>2</sup>) | O(1) | In-place | 选择排序 | 不稳定
 [堆排序](#heap_sort) | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | In-place | 选择排序 | 不稳定
 [归并排序](#merge_sort) | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | Out-place | 分治法 | 稳定
 [计数排序](#counting_sort) | O(n+k) | O(n+k) | O(n+k) | O(k) | Out-place | 非比较排序 | 稳定
 [桶排序](#bucket_sort) | O(n+k) | O(n+k) | O(n<sup>2</sup>) | O(n+k) | Out-place | 非比较排序 | 稳定
-[基数排序](#radix_sort) | O(n*k) | O(n*k) | O(n*k) | O(n+k) | Out-place | 非比较排序 | 稳定
+[基数排序](#radix_sort) | O(d(n+r)) | O(d(n+r)) | O(d(n+r)) | O(n+r) | Out-place | 非比较排序 | 稳定
 
 **平均时间复杂度从低到高：**  
 　　（1）计数排序O(n+k)、桶排序O(n+k)  
@@ -97,9 +97,9 @@
 　　2) 在子序列中进行插入排序，子序列顺序的改变，导致原数组下标对应的元素值改变了；  
 　　3) 减小增量k，重复上述步骤，直至k为1，再进行一次插入排序则完成排序。  
 **时间复杂度：**  
-　　最佳情况：T(n) = O(nlog<sup>2</sup>n)；  
-　　最差情况：T(n) = O(nlog<sup>2</sup>n)；  
-　　平均情况：T(n) = O(nlogn)；  
+　　最佳情况：T(n) = O(n)；  
+　　最差情况：T(n) = O(n<sup>2</sup>)；  
+　　平均情况：T(n) = O(n<sup>1.3</sup>)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
 [排序算法](#sort)
@@ -191,7 +191,7 @@
 　　最佳情况：T(n) = O(n+k)；  
 　　最差情况：T(n) = O(n<sup>2</sup>)；  
 　　平均情况：T(n) = O(n+k)；  
-　　稳定性：稳定；  
+　　稳定性：稳定(但若桶内排序不稳定则整体不稳定)；  
 　　空间复杂度：O(n+k)。  
 [排序算法](#sort)
 
@@ -216,11 +216,11 @@
 
 　　以上的两个例子都是从低位优先（最低位优先(Least Significant Digit first, LSD)法），也可以高位优先（最高位优先(Most Significant Digit first, LSD)法）。  
 **时间复杂度：**  
-　　最佳情况：T(n) = O(n*k)；  
-　　最差情况：T(n) = O(n*k)；  
-　　平均情况：T(n) = O(n*k)；  
+　　最佳情况：T(n) = O(d(n+r))；  
+　　最差情况：T(n) = O(d(n+r))；  
+　　平均情况：T(n) = O(d(n+r))；  
 　　稳定性：稳定；  
-　　空间复杂度：O(n+k)。  
+　　空间复杂度：O(n+r)。  
 [排序算法](#sort)
 
 ### 计数排序、桶排序、基数排序
@@ -252,4 +252,22 @@
 　　查找成功时的平均查找长度：ASL = 1/n(1+2+3+…+n) = (n+1)/2 ；  
 　　查找失败时的查找长度：ASL = n+1；  
 　　时间复杂度为：T(n) = O(n)。  
+[查找算法](#search) 
+
+### <a id="binary_search">二分查找 Binary Search</a>
+**基本思想：**  
+　　有序查找。  
+　　也称折半查找。元素必须是有序的，如果是无序的则要先进行排序操作。从中间将序列分成两半，再分别将子序列中元素与关键字对比。  
+　　对于静态查找表，一次排序后不再变化，折半查找能得到不错的效率。但对于需要频繁执行插入或删除操作的数据集来说，维护有序的排序会带来不小的工作量，那就不建议使用。  
+**算法步骤：**  
+　　1) 从中间将序列分成两个子序列，将中间值与关键字对比，若相等则返回结果；  
+　　2) 若中间元素小于/大于关键字，则将关键字与左子序列/有序列比较；  
+　　3) 重复1-2步骤，直到得到结果。  
+**时间复杂度：**  
+　　最佳情况：T(n) = O(1)；  
+　　最差情况：T(n) = O(nlogn)；  
+　　平均情况：T(n) = O(nlogn)；  
+　　稳定性：稳定；  
+　　空间复杂度：O(1)。  
+
 [查找算法](#search)
