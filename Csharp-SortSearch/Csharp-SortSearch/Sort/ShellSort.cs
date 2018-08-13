@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sort_csharp
+namespace Csharp_SortSearch.Sort
 {
     /*
      * 功能

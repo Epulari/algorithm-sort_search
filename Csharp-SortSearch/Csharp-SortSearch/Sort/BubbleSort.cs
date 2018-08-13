@@ -4,39 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sort_csharp
+namespace Csharp_SortSearch.Sort
 {
     /*
      * 功能
-     * 选择排序
+     * 冒泡排序
      * Epulari T 
-     * 2018.8.7
+     * 2018.7.31
      */
-    class SelectionSort
+    public class BubbleSort
     {
         /// <summary>
-        /// 选择排序
+        /// 冒泡排序
         /// </summary>
         /// <param name="arr">数组</param>
-        public void MySelectionSort(int[] arr)
+        public void MyBulleSort(int[] arr)
         {
             int len = arr.Length;
             if (len < 2)
             {
                 return;
             }
-            //外层循环：一轮比较。从前到后依次假设元素为最小值，依次与后面的元素值进行比较并交换，则数组从前到后依次变得有序
-            for (int i = 0; i < len - 1; i++)
+            //外层循环：一轮比较。每次都从第一个元素开始，但是每次最后都减少一个元素，则相当于每次len-1
+            for (int i = 0; i < len - 1; len--)
             {
-                //内层循环：依次与待比较元素的值比较并交换
-                for (int j = i + 1; j < len; j++)
+                //内层循环：相邻元素两两对比
+                for (int j = 0; j < len - 1; j++)
                 {
-                    int temp = arr[i];
-                    if (arr[i] > arr[j])
+                    if (arr[j] > arr[j + 1])
                     {
-                        temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
                     }
                 }
 

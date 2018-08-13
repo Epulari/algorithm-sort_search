@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Csharp_SortSearch.Sort;
+using Csharp_SortSearch.Search;
 
-namespace sort_csharp
+namespace Csharp_SortSearch
 {
     class Program
     {
@@ -224,8 +226,8 @@ namespace sort_csharp
                 桶外：7 22 23 24 26 27 28 32 33 38 53 54 78
              */
 
-            Console.ReadKey();  
-            
+            Console.ReadKey();
+
         }
     }
 }

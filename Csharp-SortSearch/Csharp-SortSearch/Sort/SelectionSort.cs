@@ -4,42 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sort_csharp
+namespace Csharp_SortSearch.Sort
 {
     /*
      * 功能
-     * 插入排序
+     * 选择排序
      * Epulari T 
-     * 2018.8.2
+     * 2018.8.7
      */
-    public class InsertionSort
+    class SelectionSort
     {
         /// <summary>
-        /// 插入排序
+        /// 选择排序
         /// </summary>
         /// <param name="arr">数组</param>
-        public void MyInsertionSort(int[] arr)
+        public void MySelectionSort(int[] arr)
         {
             int len = arr.Length;
             if (len < 2)
             {
                 return;
             }
-            //外层循环：一轮比较。每次已排序列多一个元素，i代表已排序列元素的最大索引，最开始只有一个元素arr[0]
+            //外层循环：一轮比较。从前到后依次假设元素为最小值，依次与后面的元素值进行比较并交换，则数组从前到后依次变得有序
             for (int i = 0; i < len - 1; i++)
             {
-                //内层循环：进行每轮的单个元素比较。待排元素为已排元素的下一个值arr[i + 1]，即arr[j]，将之与已排元素进行比较
-                for (int j = i + 1; j > 0; j--)
+                //内层循环：依次与待比较元素的值比较并交换
+                for (int j = i + 1; j < len; j++)
                 {
-                    if (arr[j] < arr[j - 1])
+                    int temp = arr[i];
+                    if (arr[i] > arr[j])
                     {
-                        int temp = arr[j - 1];
-                        arr[j - 1] = arr[j];
+                        temp = arr[i];
+                        arr[i] = arr[j];
                         arr[j] = temp;
-                    }
-                    else
-                    {
-                        break;
                     }
                 }
 
