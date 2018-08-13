@@ -1,7 +1,7 @@
 ## File Structure
-**Csharp-SortSearch:**Use c# to implement sorting and lookup algorithms.  
-**sort:**Use javascript to implement search algorithms.  
-**search:**Use javascript to implement sorting algorithms.  
+**Csharp-SortSearch:** Use c# to implement sorting and lookup algorithms.  
+**sort:** Use javascript to implement search algorithms.  
+**search:** Use javascript to implement sorting algorithms.  
 
 # 排序和查找算法
 ## <a id="sort">排序算法</a>
