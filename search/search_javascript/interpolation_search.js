@@ -5,6 +5,7 @@
 /**
  * 插值查找-迭代法
  * 改进的折半查找，mid计算方式不同
+ *
  * @para = arr 数组
  * @para = key 关键字
  */
@@ -74,6 +75,7 @@ console.log(index);
 /**
  * 插值查找-递归法
  * 改进的折半查找
+ *
  * @para = arr 数组
  * @para = key 关键字
  * @para = low 数组最小索引值
