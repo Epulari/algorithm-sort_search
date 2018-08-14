@@ -19,10 +19,12 @@ namespace Csharp_SortSearch.Search
         /// 顺序查找-不考虑重复
         /// </summary>
         /// <param name="arr">数组</param>
+        /// <param name="key">关键字</param>
         public int MySequenceSearch(int[] arr, int key)
         {
             int len = arr.Length;
-            for(int i = 0; i < len; i++)
+            //索引一定不会为负
+            for (int i = 0; i < len; i++)
             {
                 if(arr[i] == key)
                 {
