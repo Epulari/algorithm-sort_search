@@ -33,14 +33,23 @@ function BinarySearch(arr, key) {
 
 var arr = [7, 22, 23, 24, 26, 27, 28, 32, 33, 38, 53, 54, 78];
 console.log("二分查找1：");
+console.log("查找成功：");
 BinarySearch(arr, 53);
+console.log("查找失败：");
+BinarySearch(arr, 52);
 
 /**
  * result
+	查找成功
 	low-high：7-12
 	low-high：10-12
 	low-high：10-10
 	mid：10
+	查找失败
+	low-high：7-12
+	low-high：10-12
+	low-high：10-10
+	low-high：10-9
  */
 
 
@@ -79,12 +88,21 @@ function BinarySearch2(arr, key, low, high) {
 
 var arr = [7, 22, 23, 24, 26, 27, 28, 32, 33, 38, 53, 54, 78]
 console.log("二分查找2：");
+console.log("查找成功：");
 BinarySearch2(arr, 53, 0, arr.length - 1);
+console.log("查找失败：");
+BinarySearch2(arr, 52, 0, arr.length - 1);
 
 /**
  * result
+	查找成功：
 	low-high：7-12
 	low-high：10-12
 	low-high：10-10
 	mid：10
+	查找失败：
+	low-high：7-12
+	low-high：10-12
+	low-high：10-10
+	low-high：10-9
  */

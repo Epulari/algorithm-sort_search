@@ -24,13 +24,17 @@ namespace Csharp_SortSearch.Search
         {
             int len = arr.Length;
             //索引一定不会为负
+            int k = 0;
             for (int i = 0; i < len; i++)
             {
                 if(arr[i] == key)
                 {
+                    Console.WriteLine("比较第" + ++k + "次");
                     return i;
                 }
+                ++k;
             }
+            Console.WriteLine("比较第" + k + "次");
             return -1;
         }
     }
