@@ -24,17 +24,21 @@ namespace Csharp_SortSearch.Search
         {
             int len = arr.Length;
 
+            //序列的个数需要向上取整
             int num = len / blen, remainder = len % blen;
             if(remainder != 0)
             {
                 num += 1;
             }
 
+            //temp为交叉数组，按顺序存放块
+            //minmax存放每个序列的最小值和最大值
             int[][] temp = new int[num][];
             int[] minmax = new int[2 * num];
             int k = 0;
             for(int i = 0; i < num; i++)
             {
+                //最后一个序列的长度可能小于规定的blen
                 if(i != num -1)
                 {
                     temp[i] = new int[blen];
@@ -45,10 +49,12 @@ namespace Csharp_SortSearch.Search
                     temp[i] = new int[lastlen];
                 }
 
+                //由于初始化的数组值全为0，因此需要设置最小值为每个序列的第一个元素值，这样才能找到序列的最小值
                 minmax[i] = arr[i * blen];
                 for (int j = 0; j < temp[i].Length; j++)
                 {
                     temp[i][j] = arr[k++];
+                    //依次比较，找到每个序列的最小值和最大值
                     minmax[i] = Math.Min(minmax[i], temp[i][j]);
                     minmax[i + num] = Math.Max(minmax[i], temp[i][j]);
 
@@ -74,6 +80,7 @@ namespace Csharp_SortSearch.Search
             }
             Console.WriteLine();
 
+            //使用二分查找找到关键值属于的块索引
             BinarySearch bs = new BinarySearch();
             int indexblock = bs.MyBinarrySearchRange(minmax, key, num);
             if (indexblock != -1)
