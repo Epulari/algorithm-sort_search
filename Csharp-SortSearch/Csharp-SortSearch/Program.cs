@@ -229,39 +229,89 @@ namespace Csharp_SortSearch
             Console.WriteLine("");
             Console.WriteLine("");
             int[] arr_s = { 7, 22, 23, 24, 26, 27, 28, 32, 33, 38, 53, 54, 78 };
+            int index;
 
             SequenceSearch ss = new SequenceSearch();
             Console.WriteLine("顺序查找：");
-            int index = ss.MySequenceSearch(arr_s, 53);
-            Console.WriteLine(index);
+            index = ss.MySequenceSearch(arr_s, 53);
+            Console.WriteLine("查找成功： " + index);
+            index = ss.MySequenceSearch(arr_s, 52);
+            Console.WriteLine("查找失败： " + index);
             /*result
-                10
+                比较第11次
+                查找成功： 10
+                比较第13次
+                查找失败： -1
              */
 
             BinarySearch bis = new BinarySearch();
             Console.WriteLine("二分查找1：");
+            Console.WriteLine("查找成功：");
             bis.MyBinarySearch(arr_s, 53);
+            Console.WriteLine("查找失败：");
+            bis.MyBinarySearch(arr_s, 52);
             /*result
+                查找成功：
                 low-high：7-12
                 low-high：10-12
                 low-high：10-10
                 mid：10
+                查找失败：
+                low-high：7-12
+                low-high：10-12
+                low-high：10-10
+                low-high：10-9
              */
             Console.WriteLine("二分查找2：");
+            Console.WriteLine("查找成功：");
             bis.MyBinarySearch2(arr_s, 53, 0, arr_s.Length - 1);
+            Console.WriteLine("查找失败：");
+            bis.MyBinarySearch2(arr_s, 52, 0, arr_s.Length - 1);
             /*result
+                查找成功：
                 low-high：7-12
                 low-high：10-12
                 low-high：10-10
                 mid：10
+                查找失败：
+                low-high：7-12
+                low-high：10-12
+                low-high：10-10
+                low-high：10-9
              */
 
-
-
-
-
-            Console.ReadKey();
-
+            InterpolationSearch ints = new InterpolationSearch();
+            Console.WriteLine("插值查找1：");
+            Console.WriteLine("查找成功：");
+            ints.MyInterpolationSearch(arr_s, 53);
+            Console.WriteLine("查找失败：");
+            ints.MyInterpolationSearch(arr_s, 52);
+            /*result
+                查找成功：
+                low-high：8-12
+                low-high：10-12
+                mid：10
+                查找失败：
+                low-high：8-12
+                low-high：10-12
+                low-high：10-9
+             */
+            Console.WriteLine("插值查找2：");
+            Console.WriteLine("查找成功：");
+            ints.MyInterpolationSearch2(arr_s, 53, 0, arr_s.Length - 1);
+            Console.WriteLine("查找失败：");
+            ints.MyInterpolationSearch2(arr_s, 52, 0, arr_s.Length - 1);
+            /*result
+                查找成功：
+                low-high：8-12
+                low-high：10-12
+                mid：10
+                查找失败：
+                low-high：8-12
+                low-high：10-12
+                low-high：10-9
+             */
+             
         }
     }
 }
