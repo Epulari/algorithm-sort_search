@@ -250,18 +250,6 @@ namespace Csharp_SortSearch
             bis.MyBinarySearch(arr_s, 53);
             Console.WriteLine("查找失败：");
             bis.MyBinarySearch(arr_s, 52);
-            /*result
-                查找成功：
-                low-high：7-12
-                low-high：10-12
-                low-high：10-10
-                mid：10
-                查找失败：
-                low-high：7-12
-                low-high：10-12
-                low-high：10-10
-                low-high：10-9
-             */
             Console.WriteLine("二分查找2：");
             Console.WriteLine("查找成功：");
             bis.MyBinarySearch2(arr_s, 53, 0, arr_s.Length - 1);
@@ -286,16 +274,6 @@ namespace Csharp_SortSearch
             ints.MyInterpolationSearch(arr_s, 53);
             Console.WriteLine("查找失败：");
             ints.MyInterpolationSearch(arr_s, 52);
-            /*result
-                查找成功：
-                low-high：8-12
-                low-high：10-12
-                mid：10
-                查找失败：
-                low-high：8-12
-                low-high：10-12
-                low-high：10-9
-             */
             Console.WriteLine("插值查找2：");
             Console.WriteLine("查找成功：");
             ints.MyInterpolationSearch2(arr_s, 53, 0, arr_s.Length - 1);
@@ -342,8 +320,32 @@ namespace Csharp_SortSearch
                 查找失败： -1
              */
 
-            Console.ReadKey();
+            int[] arr_bts = { 32, 24, 54, 22, 27, 38, 78, 7, 23, 26, 28, 33, 53 };
+            BinaryTreeSearch bts = new BinaryTreeSearch();
+            Console.WriteLine("二叉树查找1：");
+            index = bts.MyBinaryTreeSearch(arr_bts, 53);
+            Console.WriteLine("查找成功： " + index);
+            index = bts.MyBinaryTreeSearch(arr_bts, 52);
+            Console.WriteLine("查找失败： " + index);
+            Console.WriteLine("二叉树查找2：");
+            index = bts.MyBinaryTreeSearch2(arr_bts, 53, 0, 0);
+            Console.WriteLine("查找成功： " + index);
+            index = bts.MyBinaryTreeSearch2(arr_bts, 52, 0, 0);
+            Console.WriteLine("查找失败： " + index);
+            /*result
+                第1次比较：i-0 arr[i]-32
+                第2次比较：i-2 arr[i]-54
+                第3次比较：i-5 arr[i]-38
+                第4次比较：i-12 arr[i]-53
+                查找成功： 12
+                第1次比较：i-0 arr[i]-32
+                第2次比较：i-2 arr[i]-54
+                第3次比较：i-5 arr[i]-38
+                第4次比较：i-12 arr[i]-53
+                查找失败： -1
+             */
 
+            Console.ReadKey();
         }
     }
 }
