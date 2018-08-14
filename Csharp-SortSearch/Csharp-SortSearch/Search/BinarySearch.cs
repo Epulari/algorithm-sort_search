@@ -83,5 +83,36 @@ namespace Csharp_SortSearch.Search
             }
             return -1;
         }
+
+        /// <summary>
+        /// 二分查找-迭代法
+        /// 分块查找中使用二分查找找到关键值属于的块索引
+        /// </summary>
+        /// <param name="arr">数组</param>
+        /// <param name="key">关键字</param>
+        /// <param name="num">序列长度</param>
+        /// <returns></returns>
+        public int MyBinarrySearchRange(int[] arr, int key, int num)
+        {
+            int len = arr.Length;
+            int low = 0, high = num - 1, mid;
+            while (low <= high && high < len)
+            {
+                mid = (low + high) / 2;
+                if (arr[mid] <= key && arr[mid + num] >= key)
+                {
+                    return mid;
+                }
+                else if (arr[mid] > key)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    low = mid + 1;
+                }
+            }
+            return -1;
+        }
     }
 }

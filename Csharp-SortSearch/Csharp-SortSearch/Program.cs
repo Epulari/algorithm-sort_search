@@ -311,7 +311,39 @@ namespace Csharp_SortSearch
                 low-high：10-12
                 low-high：10-9
              */
-             
+
+            BlockSearch bls = new BlockSearch();
+            Console.WriteLine("分块查找：");
+            index = bls.MyBlockSearch(arr_s, 53, 4);
+            Console.WriteLine("查找成功： " + index);
+            index = bls.MyBlockSearch(arr_s, 52, 4);
+            Console.WriteLine("查找失败： " + index);
+            /*result
+                序列数组：
+                7 22 23 24
+                26 27 28 32
+                33 38 53 54
+                78
+                最小值最大值：
+                7 26 33 78 24 32 54 78
+                low-high：2-3
+                mid：2
+                查找成功： 10
+
+                序列数组：
+                7 22 23 24
+                26 27 28 32
+                33 38 53 54
+                78
+                最小值最大值：
+                7 26 33 78 24 32 54 78
+                low-high：2-3
+                low-high：2-1
+                查找失败： -1
+             */
+
+            Console.ReadKey();
+
         }
     }
 }
