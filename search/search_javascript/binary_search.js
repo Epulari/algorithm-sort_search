@@ -22,12 +22,11 @@ function BinarySearch(arr, key) {
 		}
 		else if(arr[mid] > key) {
 			high = mid - 1;
-			console.log("low-high：" + low + "-" + high);
 		}
 		else {
 			low = mid + 1;
-			console.log("low-high：" + low + "-" + high);
 		}
+		console.log("low-high：" + low + "-" + high);
 	}
 	return -1;
 }

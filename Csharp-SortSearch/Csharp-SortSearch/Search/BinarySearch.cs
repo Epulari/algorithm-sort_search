@@ -37,13 +37,12 @@ namespace Csharp_SortSearch.Search
                 else if (arr[mid] > key)
                 {
                     high = mid - 1;
-                    Console.WriteLine("low-high：" + low + "-" + high);
                 }
                 else
                 {
                     low = mid + 1;
-                    Console.WriteLine("low-high：" + low + "-" + high);
                 }
+                Console.WriteLine("low-high：" + low + "-" + high);
             }
             return -1;
         }
