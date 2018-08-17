@@ -47,6 +47,7 @@
     <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="Search\BinaryTreeSearch.cs" />
     <Compile Include="Search\BlockSearch.cs" />
+    <Compile Include="Search\FibonacciSearch.cs" />
     <Compile Include="Search\InterpolationSearch.cs" />
     <Compile Include="Search\SequenceSearch.cs" />
     <Compile Include="Sort\BubbleSort.cs" />
