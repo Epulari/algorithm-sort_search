@@ -24,6 +24,7 @@ namespace Csharp_SortSearch.Sort
         /// <param name="arr">数组</param>
         /// <param name="low">数组的起始位置</param>
         /// <param name="high">数组的终止位置</param>
+        /// <returns>排好序的数组</returns>
         public int[] MyQuickSort(int[] arr, int low, int high)
         {
             int len = arr.Length;

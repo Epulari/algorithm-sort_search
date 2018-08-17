@@ -20,6 +20,7 @@ namespace Csharp_SortSearch.Search
         /// </summary>
         /// <param name="arr">数组</param>
         /// <param name="key">关键字</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyBinaryTreeSearch(int[] arr, int key)
         {
             int len = arr.Length;
@@ -54,6 +55,7 @@ namespace Csharp_SortSearch.Search
         /// <param name="key">关键字</param>
         /// <param name="i">二叉树父节点索引</param>
         /// <param name="k">比较次数</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyBinaryTreeSearch2(int[] arr, int key, int i, int k)
         {
             int len = arr.Length;

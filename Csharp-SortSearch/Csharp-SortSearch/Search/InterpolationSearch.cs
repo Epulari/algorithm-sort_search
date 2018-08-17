@@ -20,6 +20,7 @@ namespace Csharp_SortSearch.Search
         /// </summary>
         /// <param name="arr">数组</param>
         /// <param name="key">关键字</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyInterpolationSearch(int[] arr, int key)
         {
             int len = arr.Length;
@@ -54,6 +55,7 @@ namespace Csharp_SortSearch.Search
         /// <param name="key">关键字</param>
         /// <param name="low">数组最小索引值</param>
         /// <param name="high">数组最大索引值</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyInterpolationSearch2(int[] arr, int key, int low, int high)
         {
             int len = arr.Length;

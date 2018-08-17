@@ -20,6 +20,8 @@ namespace Csharp_SortSearch.Search
         /// </summary>
         /// <param name="arr">数组</param>
         /// <param name="key">关键字</param>
+        /// <param name="blen">块大小（每块的元素个数）</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyBlockSearch(int[] arr, int key, int blen)
         {
             int len = arr.Length;

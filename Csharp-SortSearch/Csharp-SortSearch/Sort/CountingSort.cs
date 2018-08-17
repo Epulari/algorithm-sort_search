@@ -19,6 +19,7 @@ namespace Csharp_SortSearch.Sort
         /// 计数排序-使用一个额外的数组，以f(x)=x-min代替x，即其中第i-min个元素是待排序数组中值等于i的元素的个数，知道了数组中比x小的元素的个数，就可以直接把x放到第（x+1）个位置上，即元素索引为x
         /// </summary>
         /// <param name="arr">数组</param>
+        /// <returns>排好序的数组</returns>
         public int[] MyCountingSort(int[] arr)
         {
             int len = arr.Length;

@@ -20,6 +20,7 @@ namespace Csharp_SortSearch.Search
         /// </summary>
         /// <param name="arr">数组</param>
         /// <param name="key">关键字</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyBinarySearch(int[] arr, int key)
         {
             int len = arr.Length;
@@ -54,6 +55,7 @@ namespace Csharp_SortSearch.Search
         /// <param name="key">关键字</param>
         /// <param name="low">数组最小索引值</param>
         /// <param name="high">数组最大索引值</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MyBinarySearch2(int[] arr, int key, int low, int high)
         {
             int len = arr.Length;
@@ -90,7 +92,7 @@ namespace Csharp_SortSearch.Search
         /// <param name="arr">数组</param>
         /// <param name="key">关键字</param>
         /// <param name="num">序列长度</param>
-        /// <returns></returns>
+        /// <returns>key对应的块索引</returns>
         public int MyBinarrySearchRange(int[] arr, int key, int num)
         {
             int len = arr.Length;

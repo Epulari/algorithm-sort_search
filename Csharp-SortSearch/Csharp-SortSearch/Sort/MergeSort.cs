@@ -16,12 +16,12 @@ namespace Csharp_SortSearch.Sort
     class MergeSort
     {
         /// <summary>
-        /// 
+        /// 归并排序-迭代法
         /// </summary>
         /// <param name="left">左数组</param>
         /// <param name="right">右数组</param>
-        /// <returns>排序好的数组</returns>
-        int[] MergeArray(int[] left, int[] right)
+        /// <returns>排好序的数组</returns>
+        public int[] MergeArray(int[] left, int[] right)
         {
             int llen = left.Length;
             int rlen = right.Length;
@@ -69,10 +69,10 @@ namespace Csharp_SortSearch.Sort
         }
 
         /// <summary>
-        /// 归并排序-递归方法
+        /// 归并排序-递归法
         /// </summary>
         /// <param name="arr">数组</param>
-        /// <returns>排序好的数组</returns>
+        /// <returns>排好序的数组</returns>
         public int[] MyMergeSort(int[] arr)
         {
             int len = arr.Length;

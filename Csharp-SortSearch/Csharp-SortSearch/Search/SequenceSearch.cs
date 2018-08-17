@@ -20,6 +20,7 @@ namespace Csharp_SortSearch.Search
         /// </summary>
         /// <param name="arr">数组</param>
         /// <param name="key">关键字</param>
+        /// <returns>key对应的原数组索引</returns>
         public int MySequenceSearch(int[] arr, int key)
         {
             int len = arr.Length;
