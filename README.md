@@ -3,9 +3,9 @@
 **sort:** Use javascript to implement search algorithms.  
 **search:** Use javascript to implement sorting algorithms.  
 
-# 排序和查找算法
+# <a id="algorithm">排序和查找算法<</a>
 **[排序算法](#sort)：**[冒泡排序](#bubble_sort) [快速排序](#quick_sort) [插入排序](#insertion_sort) [希尔排序](#shell_sort) [选择排序](#selection_sort) [堆排序](#heap_sort) [归并排序](#merge_sort) [计数排序](#counting_sort) [桶排序](#bucket_sort) [基数排序](#radix_sort)  
-**[查找算法](#search)：**顺序查找(#sequence_search) 二分查找(#binary_search) 插值查找(#interpolation_search) 分块查找(#block_search) 二叉树查找(#binary_tree_search)  
+**[查找算法](#search)：**[顺序查找](#sequence_search) [二分查找](#binary_search) [插值查找](#interpolation_search) [斐波那契查找](#fibonacci_search) [分块查找](#block_search) [二叉树查找](#binary_tree_search)  
 
 ## <a id="sort">排序算法</a>
 排序算法 | 平均时间复杂度 | 最好情况 | 最坏情况 | 空间复杂度（辅助空间） | 排序方式 | 基本思想 | 稳定性
@@ -38,6 +38,7 @@
 **Out-place：**  
 　　外部排序，因排序数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。  
 　　归并排序、基数排序、计数排序、桶排序。  
+ [排序和查找算法](#algorithm)
 
 ### <a id="bubble_sort">冒泡排序 Bubble Sort</a>
 **基本思想：**  
@@ -54,7 +55,7 @@
 　　平均情况：T(n) = O(n<sup>2</sup>)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(1)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="quick_sort">快速排序 Quick Sort</a>
 **基本思想：**  
@@ -71,7 +72,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(nlogn)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="insertion_sort">插入排序 Insertion Sort</a>
 **基本思想：**  
@@ -88,7 +89,7 @@
 　　平均情况：T(n) = O(n<sup>2</sup>)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(1)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="shell_sort">希尔排序 Shell Sort</a>
 **基本思想：**  
@@ -105,7 +106,7 @@
 　　平均情况：T(n) = O(n<sup>1.3</sup>)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="selection_sort">选择排序 Selection Sort</a>
 **基本思想：**  
@@ -121,7 +122,7 @@
 　　平均情况：T(n) = O(n<sup>2</sup>)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="heap_sort">堆排序 Heap Sort</a>
 **基本思想：**  
@@ -140,7 +141,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：不稳定；  
 　　空间复杂度：O(1)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="merge_sort">归并排序 Merge Sort</a>
 **基本思想：**  
@@ -156,7 +157,7 @@
 　　平均情况：T(n) = O(nlogn)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(n)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="counting_sort">计数排序 Counting Sort</a>
 **基本思想：**  
@@ -177,7 +178,7 @@
 　　平均情况：T(n) = O(n+k)；  
 　　稳定性：稳定；  
 　　空间复杂度：O(k)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="bucket_sort">桶排序 Bucket Sort</a>
 **基本思想：**  
@@ -196,7 +197,7 @@
 　　平均情况：T(n) = O(n+k)；  
 　　稳定性：稳定(但若桶内排序不稳定则整体不稳定)；  
 　　空间复杂度：O(n+k)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### <a id="radix_sort">基数排序 Radix Sort</a>
 **基本思想：**  
@@ -224,7 +225,7 @@
 　　平均情况：T(n) = O(d(n+r))；  
 　　稳定性：稳定；  
 　　空间复杂度：O(n+r)。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ### 计数排序、桶排序、基数排序
 　　我查阅了很多资料和例子，很多人都把这三者搞的混乱不清，有些人认为计数排序是桶排序，有些人认为桶排序是基数排序。  
@@ -235,7 +236,7 @@
 　　因此，计数排序中的桶排序起到的作用是使元素值按顺序排列，因为桶序号代表元素值，而由于桶序号的唯一性和规则性，每个元素值只出现一次，且这个排列的顺序中不仅包含所有元素值，还有其他无关的值，而桶内元素代表无序序列相同值出现的次数。而对于桶排序，桶序号是与元素值有关的映射关系（其实计数排序也是与元素值有关的映射关系，如桶序号等于元素值，则映射关系为f(x)=x），桶内元素就是无序序列的元素值。  
 　　**基数排序**的思想是按位数排列，不论是最高位优先法MSD，还是最低位优先法LSD，它的中心都是依次对数据的同一位进行规则建立，分配如桶，然后依次取出，当最后一位按规则入桶然后依次取出后，必然为有序数列。  
 　　因此从上面分析来看，计数排序只是在实现其中心思想上使用了桶排序的方法，借用桶排序这种手段来实现计数排序的计数；桶排序是按一定规则对数据进行分类然后合并，可以说是一种分治法；而基数排序是建立在桶排序之上的，它的核心是对每一位（基数）进行桶排序。  
-[排序算法](#sort)
+[排序算法](#sort) [排序和查找算法](#algorithm)
 
 ## <a id="search">查找算法</a>
 **查找算法分类：**  
@@ -248,6 +249,7 @@
 **简单查找：**顺序查找(#sequence_search) 二分查找(#binary_search) 插值查找(#interpolation_search) 分块查找(#block_search) 二叉树查找(#binary_tree_search) 斐波那契查找  
 **数据结构查找：**2-3树查找 红黑树查找 哈希查找（散列函数）  
 **搜索算法：**枚举算法 深度优先搜索 广度优先搜索 A*算法 回溯算法 蒙特卡洛树搜索 广度优先搜索 广度优先搜索  
+ [排序和查找算法](#algorithm)
 
 ### <a id="sequence_search">顺序查找 Sequence Search</a>
 **基本思想：**  
@@ -260,7 +262,7 @@
 　　最佳情况：T(n) = O(1)；  
 　　最差情况：T(n) = O(n)；  
 　　平均情况：T(n) = O(n)。  
-[查找算法](#search)
+[查找算法](#search) [排序和查找算法](#algorithm)
 
 ### <a id="binary_search">二分查找 Binary Search</a>
 **基本思想：**  
@@ -277,7 +279,7 @@
 　　最差情况：T(n) = O(logn)；  
 　　平均情况：T(n) = O(logn)；  
 　　空间复杂度：O(1)。  
-[查找算法](#search)
+[查找算法](#search) [排序和查找算法](#algorithm)
 
 ### <a id="interpolation_search">插值查找 Interpolation Search</a>
 **基本思想：**  
@@ -291,7 +293,7 @@
 　　最佳情况：T(n) = O(1)；  
 　　平均情况：T(n) = O(logn)；  
 　　空间复杂度：O(1)。  
-[查找算法](#search)
+[查找算法](#search) [排序和查找算法](#algorithm)
 
 ### <a id="fibonacci_search">斐波那契查找 Fibonacci Search</a>
 **基本思想：**  
@@ -308,7 +310,7 @@
 　　最佳情况：T(n) = O(1)；  
 　　平均情况：T(n) = O(logn)；  
 　　空间复杂度：O(1)。  
-[查找算法](#search)
+[查找算法](#search) [排序和查找算法](#algorithm)
 
 ### <a id="block_search">分块查找 Block Search</a>
 **基本思想：**  
@@ -321,7 +323,7 @@
 　　3) 在该块中使用任意查找方法进行查找。  
 **时间复杂度：**  
 　　平均情况：T(n) = O(logn)。  
-[查找算法](#search)
+[查找算法](#search) [排序和查找算法](#algorithm)
 
 ### <a id="binary_tree_search">二叉树查找 Binary Tree Search</a>
 **基本思想：**  
@@ -337,6 +339,6 @@
 **时间复杂度：**  
 　　最差情况：T(n) = O(n)；  
 　　平均情况：T(n) = O(log<sup>1.39</sup>n)。  
-[查找算法](#search)
+[查找算法](#search) [排序和查找算法](#algorithm)
 
 
