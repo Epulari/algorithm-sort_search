@@ -3,7 +3,7 @@
 **sort:** Use javascript to implement search algorithms.  
 **search:** Use javascript to implement sorting algorithms.  
 
-# <a id="algorithm">排序和查找算法<</a>
+# <a id="algorithm">排序和查找算法</a>
 **[排序算法](#sort)：**[冒泡排序](#bubble_sort) [快速排序](#quick_sort) [插入排序](#insertion_sort) [希尔排序](#shell_sort) [选择排序](#selection_sort) [堆排序](#heap_sort) [归并排序](#merge_sort) [计数排序](#counting_sort) [桶排序](#bucket_sort) [基数排序](#radix_sort)  
 **[查找算法](#search)：**[顺序查找](#sequence_search) [二分查找](#binary_search) [插值查找](#interpolation_search) [斐波那契查找](#fibonacci_search) [分块查找](#block_search) [二叉树查找](#binary_tree_search)  
 
@@ -246,7 +246,7 @@
 　　　　无序查找：被查找数列有序无序均可；  
 　　　　有序查找：被查找数列必须为有序数列。  
 
-**简单查找：**顺序查找(#sequence_search) 二分查找(#binary_search) 插值查找(#interpolation_search) 分块查找(#block_search) 二叉树查找(#binary_tree_search) 斐波那契查找  
+**简单查找：**[顺序查找](#sequence_search) [二分查找](#binary_search) [插值查找](#interpolation_search) [斐波那契查找](#fibonacci_search) [分块查找](#block_search) [二叉树查找](#binary_tree_search)  
 **数据结构查找：**2-3树查找 红黑树查找 哈希查找（散列函数）  
 **搜索算法：**枚举算法 深度优先搜索 广度优先搜索 A*算法 回溯算法 蒙特卡洛树搜索 广度优先搜索 广度优先搜索  
  [排序和查找算法](#algorithm)
@@ -262,7 +262,7 @@
 　　最佳情况：T(n) = O(1)；  
 　　最差情况：T(n) = O(n)；  
 　　平均情况：T(n) = O(n)。  
-[查找算法](#search) [排序和查找算法](#algorithm)
+[查找算法](#search)     [排序和查找算法](#algorithm)
 
 ### <a id="binary_search">二分查找 Binary Search</a>
 **基本思想：**  
