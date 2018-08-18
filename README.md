@@ -246,8 +246,8 @@
 　　　　无序查找：被查找数列有序无序均可；  
 　　　　有序查找：被查找数列必须为有序数列。  
 
-**简单查找：**[顺序查找](#sequence_search) [二分查找](#binary_search) [插值查找](#interpolation_search) [斐波那契查找](#fibonacci_search) [分块查找](#block_search) [二叉树查找](#binary_tree_search)  
-**数据结构查找：** 2-3树查找 红黑树查找 哈希查找（散列函数） （待实现）  
+**简单查找：**[顺序查找](#sequence_search) [二分查找](#binary_search) [插值查找](#interpolation_search) [斐波那契查找](#fibonacci_search) [分块查找](#block_search)  
+**数据结构查找：**[二叉树查找](#binary_tree_search) 2-3树查找 红黑树查找 哈希查找（散列函数） （待实现）  
 **搜索算法：** 枚举算法 深度优先搜索 广度优先搜索 A*算法 回溯算法 蒙特卡洛树搜索 广度优先搜索 广度优先搜索 （待实现）  
  [排序和查找算法](#algorithm)
 
