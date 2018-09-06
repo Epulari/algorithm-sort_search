@@ -76,12 +76,16 @@ function BinarySearch2(arr, key, low, high) {
 		else if(arr[mid] > key) {
 			high = mid - 1;
 			console.log("low-high：" + low + "-" + high);
-			return BinarySearch2(arr, key, low, high);
+			//return BinarySearch2(arr, key, low, high);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, low, high)
 		}
 		else {
 			low = mid + 1;
 			console.log("low-high：" + low + "-" + high);
-			return BinarySearch2(arr, key, low, high);
+			//return BinarySearch2(arr, key, low, high);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, low, high)
 		}
 	}
 	return -1;
@@ -96,14 +100,14 @@ console.log("查找失败：" + index);
 
 /**
  * result
-	查找成功：
 	low-high：7-12
 	low-high：10-12
 	low-high：10-10
 	mid：10
-	查找失败：
+	查找成功：10
 	low-high：7-12
 	low-high：10-12
 	low-high：10-10
 	low-high：10-9
+	查找失败：-1
  */

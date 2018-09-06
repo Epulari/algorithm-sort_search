@@ -73,11 +73,15 @@ function BinaryTreeSearch2(arr, key, i, k) {
 		}
 		else if(arr[i] > key) {
 			//左子节点
-			return BinaryTreeSearch(arr, key, 2 * i + 1, k);
+			//return BinaryTreeSearch(arr, key, 2 * i + 1, k);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, 2 * i + 1, k);
 		}
 		else {
 			//右子节点
-			return BinaryTreeSearch(arr, key, 2 * i + 2, k);
+			//return BinaryTreeSearch(arr, key, 2 * i + 2, k);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, 2 * i + 1, k);
 		}
 	}
 	return -1;

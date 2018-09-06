@@ -50,7 +50,9 @@ function MergeSort(arr) {
 	//选取中间元素为基准元素
 	var mid = Math.floor(len / 2);
 	var left = arr.slice(0, mid), right = arr.slice(mid);
-	return MergeArray(MergeSort(left), MergeSort(right)); //递归
+	//return MergeArray(MergeSort(left), MergeSort(right)); //递归
+	//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+	return MergeArray(MergeSort(left), arguments.callee(right));
 }
 
 var arr = [7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33];

@@ -104,12 +104,16 @@ function InterpolationSearch2(arr, key, low, high) {
 		else if(arr[mid] > key) {
 			high = mid - 1;
 			console.log("low-high：" + low + "-" + high);
-			return InterpolationSearch2(arr, key, low, high);
+			//return InterpolationSearch2(arr, key, low, high);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, low, high);
 		}
 		else {
 			low = mid + 1;
 			console.log("low-high：" + low + "-" + high);
-			return InterpolationSearch2(arr, key, low, high);
+			//return InterpolationSearch2(arr, key, low, high);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, low, high);
 		}
 	}
 	return -1;

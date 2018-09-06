@@ -121,7 +121,9 @@ function FibonacciS(arr, key, low, high, fibonacci, k, len) {
 			//范围[low,mid-1]内的元素个数为F(k-1)-1个，可以递归地应用斐波那契查找
 			k -= 1;
 			console.log("low-high-k：" + low + "-" + high + "-" + k);
-			return FibonacciS(arr, key, low, high, fibonacci, k, len);
+			//return FibonacciS(arr, key, low, high, fibonacci, k, len);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, low, high, fibonacci, k, len);
 		}
 		else {
 			//待查找的元素在[mid+1,hign]范围内
@@ -130,7 +132,9 @@ function FibonacciS(arr, key, low, high, fibonacci, k, len) {
 			//元素个数计算：新数组长度- 左序列个数 - mid元素 = newlen -（F(k-1) - 1) - 1 = (F(k) - 1) - F(k-1) = F(k) - F(k-1) - 1=F(k-2) - 1
 			k -= 2;
 			console.log("low-high-k：" + low + "-" + high + "-" + k);
-			return FibonacciS(arr, key, low, high, fibonacci, k, len);
+			//return FibonacciS(arr, key, low, high, fibonacci, k, len);
+			//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+			return arguments.callee(arr, key, low, high, fibonacci, k, len);
 		}
 	}
 	return -1;

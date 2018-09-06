@@ -35,7 +35,9 @@ function QuickSort(arr) {
 	}
 	//输出每一次排列的结果
 	console.log(left.concat(key, right));
-	return  QuickSort(left).concat(key).concat(QuickSort(right)) //递归
+	//return  QuickSort(left).concat(key).concat(QuickSort(right)); //递归
+	//arguments的callee属性是一个指针，指向拥有这个arguments对象的函数
+	return arguments.callee(left).concat(key).concat(arguments.callee(right));
 }
 
 var arr = [7, 26, 53, 22, 32, 28, 38, 23, 24, 54, 27, 78, 33];
