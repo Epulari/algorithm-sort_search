@@ -14,7 +14,7 @@ function BinarySearch(arr, key) {
 	var low = 0, high = len - 1, mid;
 	while(low <= high && high < len) {
 		//中间元素为首元素索引与尾元素索引和的平均值
-		//为了防止溢出，使用位运算(right - left) >> 1替代(low + high) / 2，又使用(right - left) >>> 1替代(right - left) >> 1
+		//为了防止溢出，使用位运算(low + high) >> 1替代(low + high) / 2，又使用(low + high) >>> 1替代(right - left) >> 1
 		mid = Math.floor((low + high) / 2);
 		if(arr[mid] == key) {
 			console.log("mid：" + mid);
